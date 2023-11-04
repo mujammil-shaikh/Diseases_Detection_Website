@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skin Diseases Detection - Intermediate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main_style.css">
+</head>
+<body>
+    <nav id="nav">
+        <div class="action-buttons">
+            <img src="/Image/Skin_Logo.png" alt="Skin Diseases Model" id="logo">
+            <a href="index.html">Home</a>
+            <a href="skin_model.html">Skin Model</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="h1">Skin Diseases Detection</h1>
+        <p class="p">This page provides an introduction to the skin diseases detection model.</p>
+        
+        <h2 class="h2">Model Introduction</h2>
+        <p class="p">This skin diseases detection model is fine-tuned from the state-of-the-art <a href="https://huggingface.co/facebook/convnext-base-224-22k" target="_blank">Facebook/ConvNeXT-Base</a> model available on Hugging Face.</p>
+        
+        <h2 class="h2">The HAM10000 Dataset</h2>
+        <p class="p">The model is trained on the "HAM10000" dataset, which is a collection of dermatoscopic images used for training neural networks to diagnose pigmented skin lesions automatically. This dataset is highly valuable for researchers and practitioners in both the dermatology and machine learning fields.</p>
+        
+        <p class="p">The dataset addresses the challenges of small dataset sizes and lack of diversity by offering a wide range of images collected from different populations using various imaging modalities. It comprises a total of 10,015 dermatoscopic images covering various diagnostic categories associated with pigmented skin lesions:</p>
+        
+        <ul class="ul">
+            <li>Actinic keratoses and intraepithelial carcinoma (akiec)</li>
+            <li>Basal cell carcinoma (bcc)</li>
+            <li>Benign keratosis-like lesions (solar lentigines, seborrheic keratoses, and lichen-planus like keratoses - bkl)</li>
+            <li>Dermatofibroma (df)</li>
+            <li>Melanoma (mel)</li>
+            <li>Melanocytic nevi (nv)</li>
+            <li>Vascular lesions (angiomas, angiokeratomas, pyogenic granulomas, and hemorrhage - vasc)</li>
+        </ul>
+        
+        <p class="p">For reliability, over 50% of the lesions were confirmed through histopathology. For the remaining cases, ground truth was established through follow-up examinations, expert consensus, or confirmation using in-vivo confocal microscopy. The dataset also addresses the need for multiple images of the same lesion using the `lesion_id` column in the "HAM10000_metadata" file for tracking.</p>
+        
+        <p class="p">Due to upload size limitations, the dataset is divided into two files:</p>
+        
+        <ol class="ol">
+            <li>"HAM10000_images_part1.zip" (containing 5,000 JPEG files)</li>
+            <li>"HAM10000_images_part2.zip" (containing 5,015 JPEG files)</li>
+        </ol>
+        
+        <p class="p">Researchers can utilize this dataset to develop and evaluate AI-based systems for classifying and diagnosing skin lesions. It offers a diverse and representative set of images, making it a valuable resource for advancing automated diagnosis through machine learning algorithms.</p>
+        
+        <p class="p">Here's a sample table representing the dataset:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>lesion_id</th>
+                    <th>filename</th>
+                    <th>labels</th>
+                    <th>dx_type</th>
+                    <th>age</th>
+                    <th>sex</th>
+                    <th>localization</th>
+                    <th>dataset</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HAM_0002761</td>
+                    <td>ISIC_0029068</td>
+                    <td>Benign keratosis like lesions</td>
+                    <td>histo</td>
+                    <td>60</td>
+                    <td>male</td>
+                    <td>face</td>
+                    <td>vidir_modern</td>
+                </tr>
+                <tr>
+                    <td>HAM_0005132</td>
+                    <td>ISIC_0025837</td>
+                    <td>Benign keratosis like lesions</td>
+                    <td>histo</td>
+                    <td>70</td>
+                    <td>female</td>
+                    <td>back</td>
+                    <td>vidir_modern</td>
+                </tr>
+                <tr>
+                    <td>HAM_0005132</td>
+                    <td>ISIC_0025209</td>
+                    <td>Benign keratosis like lesions</td>
+                    <td>histo</td>
+                    <td>70</td>
+                    <td>female</td>
+                    <td>back</td>
+                    <td>vidir_modern</td>
+                </tr>
+                <tr>
+                    <td>HAM_0001396</td>
+                    <td>ISIC_0025276</td>
+                    <td>Benign keratosis like lesions</td>
+                    <td>histo</td>
+                    <td>55</td>
+                    <td>female</td>
+                    <td>trunk</td>
+                    <td>vidir_modern</td>
+                </tr>
+                <tr>
+                    <td>HAM_0004234</td>
+                    <td>ISIC_0029396</td>
+                    <td>Benign keratosis like lesions</td>
+                    <td>histo</td>
+                    <td>85</td>
+                    <td>female</td>
+                    <td>chest</td>
+                    <td>vidir_modern</td>
+                </tr>
+                <!-- Add more data rows as needed -->
+            </tbody>
+        </table>
+        
+        <h2 class="h2">Training Process</h2>
+        <p class="p">The model training process can be understood from a code snippet provided in a tutorial available at <a href="https://www.youtube.com/watch?v=Hn1IgPY42Bw" target="_blank">This YouTube Link</a> by NielsRogge.</p>
+        
+        <h2 class="h2">Model and Dataset Information</h2>
+        <p class="p">Both the dataset and model can be accessed on Hugging Face:</p>
+        <ul class="ul">
+            <li><a href="https://huggingface.co/datasets/SM200203102097/skinDiseasesDetectionModel" target="_blank">Model</a></li>
+            <li><a href="https://huggingface.co/SM200203102097/skinDiseasesDetectionModel" target="_blank">Dataset</a></li>
+        </ul>
+        
+        <h2 class="h2">Credits</h2>
+        <p class="p">This project acknowledges the invaluable assistance of ChatGPT by OpenAI. You can learn more about ChatGPT at <a href="https://chat.openai.com/" target="_blank">This Link</a>.</p>
+        
+        <div class="action-buttons" id="footer">
+            <a href="index.html">Back to Home</a>
+            <a href="skin_model.html">Go to Skin Model</a>
+        </div>
+    </div>
+    <script src="main_script.js" > </script>
+</body>
+</html>

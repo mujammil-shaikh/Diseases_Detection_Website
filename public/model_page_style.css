@@ -1,0 +1,243 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #000;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+/* Navigation bar */
+#nav {
+  background-color: #144954;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1% 2%;
+}
+
+#nav a {
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+
+/* Navigation logo (img) */
+#nav img {
+  align-self: center;
+  height: 20px;
+  width: auto;
+}
+
+#logo:active{
+  padding: 1%;
+  background-color: #e4312b;
+  border-radius: 50px;
+}
+#h1 {
+  text-align: center;
+  color: white;
+  padding: 1% 0;
+  background-color: #e4312b;
+  border-radius: 5px;
+  margin: 1%;
+}
+
+#introduction{
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #1449548b;
+}
+/* Container styles for both sections */
+ #imagePreview {
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #1449548b;
+}
+
+/* Image-specific styles */
+.image-preview img {
+  width: 20%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.image-preview p {
+  width: 70%;
+  text-align: center;
+}
+
+/* Disease-specific styles */
+.disease {
+  margin: 1%;
+  padding: 1%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #1449548b;
+}
+
+.disease h3,.disease p {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.disease ul{
+  padding-left: 1%;
+  margin: 2%;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons a,.action-buttons button {
+  background-color: #e4312b;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 1% 2%; /* Adjust as needed */
+  border-radius: 5px;
+  margin: 0 2%; /* Adjust as needed */
+  transition: background-color 0.3s;
+}
+
+.action-buttons a:hover,.action-buttons button:hover {
+  background-color: #144954;
+  color: #e4312b;
+}
+
+#footer{
+  margin-bottom: 1%;
+}
+
+
+/* Links */
+a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #e4312b;
+}
+
+#resultBar{
+
+  margin: 1%;
+  padding: 1%;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #1449548b;
+}
+/* Additional styles for elements in client.js */
+.prediction-results {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  justify-content: space-between;
+}
+
+.prediction {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.prediction .label {
+  font-weight: bold;
+  color: #000; /* Text color */
+}
+
+.prediction .score {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #000; /* Text color */
+}
+
+.prediction .score-bar {
+  background: rgba(0, 0, 0, 0.2);
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.prediction .score-fill {
+  height: 100%;
+  border-radius: 5px;
+  background: #e4312b; /* Red: #E4312B - Fill color */
+}
+
+/* Media Query for Small Screens (e.g., smartphones) */
+@media (max-width: 768px) {
+  /* Adjust styles for small screens here */
+  body {
+    font-weight: 300; 
+    font-size: x-small;/* Adjust font size for readability on small screens */
+  }
+
+  #nav {
+    padding: 1%; /* Adjust padding as needed */
+  }
+
+  .action-buttons{
+    flex-direction: column;
+  }
+  
+  #h1 {
+    font-size: large;
+    margin-top: 2%; /* Adjust font size for headings on small screens */
+  }
+
+  .image-preview img {
+  width: 50%;
+  }
+
+  .disease,.disease h3,.disease p,.disease ul,#imagePreview, #introduction,#resultBar{
+    margin: 5%;
+  }
+  #fileButton, #predictButton{
+    margin: 2% 5%;
+  }
+
+  .disease h3 {
+    font-size: medium; /* Adjust font size for disease-specific elements */
+  }
+
+  .disease p {
+    font-size: smaller;
+  }
+
+  .action-buttons a, .action-buttons button {
+    padding: 1%; /* Adjust button padding on small screens */
+    margin: 1%;
+  }
+}
+

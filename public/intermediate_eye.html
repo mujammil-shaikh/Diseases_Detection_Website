@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eye Diseases Detection - Intermediate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main_style.css">
+</head>
+<body>
+    <nav id="nav">
+        <div class="action-buttons">
+            <img src="/Image/Eye_Logo.png" alt="Eye Diseases Model" id="logo">
+            <a href="index.html">Home</a>
+            <a href="eye_model.html">Eye Model</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1 class="h1">Eye Diseases Detection</h1>
+        <p class="p">This page provides an introduction to the eye diseases detection model.</p>
+        
+        <h2 class="h2">Model Introduction</h2>
+        <p class="p">This eye diseases detection model is fine-tuned from the state-of-the-art <a href="https://huggingface.co/facebook/convnext-base-224-22k" target="_blank">Facebook/ConvNeXT-Base</a> model available on Hugging Face.</p>
+        
+        <h2 class="h2">Ocular Disease Intelligent Recognition (ODIR) Dataset</h2>
+        <p class="p">The model is trained on the "Ocular Disease Intelligent Recognition (ODIR)" dataset, which contains structured ophthalmic data from 5,000 patients. The dataset includes patient age, color fundus photographs for both left and right eyes, and diagnostic keywords provided by doctors. The data was collected from various hospitals and medical centers in China by Shanggong Medical Technology Co., Ltd. Different cameras were used to capture fundus images, leading to varying image resolutions. Trained human readers annotated the data with diagnostic labels, resulting in eight possible labels:</p>
+        
+        <ul class="ul">
+            <li>Normal (N)</li>
+            <li>Diabetes (D)</li>
+            <li>Glaucoma (G)</li>
+            <li>Cataract (C)</li>
+            <li>Age-related Macular Degeneration (A)</li>
+            <li>Hypertension (H)</li>
+            <li>Pathological Myopia (M)</li>
+            <li>Other diseases/abnormalities (O)</li>
+        </ul>
+        
+        <p class="p">Here's a sample table representing the dataset:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient Age</th>
+                    <th>Patient Sex</th>
+                    <th>Left-Diagnostic Keywords</th>
+                    <th>Right-Diagnostic Keywords</th>
+                    <th>Labels</th>
+                    <th>Filename</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>69</td>
+                    <td>Female</td>
+                    <td>cataract</td>
+                    <td>normal fundus</td>
+                    <td>Normal</td>
+                    <td>0_right.jpg</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>57</td>
+                    <td>Male</td>
+                    <td>normal fundus</td>
+                    <td>normal fundus</td>
+                    <td>Normal</td>
+                    <td>1_right.jpg</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>42</td>
+                    <td>Male</td>
+                    <td>laser spot, moderate non proliferative retinopathy</td>
+                    <td>moderate non proliferative retinopathy</td>
+                    <td>Diabetes</td>
+                    <td>2_right.jpg</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>53</td>
+                    <td>Male</td>
+                    <td>macular epiretinal membrane</td>
+                    <td>mild nonproliferative retinopathy</td>
+                    <td>Diabetes</td>
+                    <td>4_right.jpg</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>50</td>
+                    <td>Female</td>
+                    <td>moderate non proliferative retinopathy</td>
+                    <td>moderate non proliferative retinopathy</td>
+                    <td>Diabetes</td>
+                    <td>5_right.jpg</td>
+                </tr>
+                <!-- Add more data rows as needed -->
+            </tbody>
+        </table>
+        
+        
+        <h2 class="h2">Training Process</h2>
+        <p class="p">The model training process can be understood from a code snippet provided in a tutorial available at <a href="https://www.youtube.com/watch?v=Hn1IgPY42Bw" target="_blank">This YouTube Link</a> by NielsRogge.</p>
+        
+        <h2 class="h2">Model and Dataset Information</h2>
+        <p class="p">Both the dataset and model can be accessed on Hugging Face:</p>
+        <ul class="ul">
+            <li><a href="https://huggingface.co/datasets/SM200203102097/eyeDiseasesDetectionModel" target="_blank">Model</a></li>
+            <li><a href="https://huggingface.co/SM200203102097/eyeDiseasesDetectionModel" target="_blank">Dataset</a></li>
+        </ul>
+        
+        <h2 class="h2">Credits</h2>
+        <p class="p">This project acknowledges the invaluable assistance of ChatGPT by OpenAI. You can learn more about ChatGPT at <a href="https://chat.openai.com/" target="_blank">This Link</a>.</p>
+        
+        <div class="action-buttons" id="footer">
+            <a href="index.html">Back to Home</a>
+            <a href="eye_model.html">Go to Eye Model</a>
+        </div>
+    </div>
+    <script src="main_script.js"> </script>
+</body>
+</html>
