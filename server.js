@@ -43,11 +43,11 @@ app.use(express.json());
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-app.get('/skin_model.html', (req, res) => {
+app.get('/skin_Model.html', (req, res) => {
   res.sendFile(__dirname + '/public/skin_model.html');
 });
 
-app.get('/eye_model.html', (req, res) => {
+app.get('/eye_Model.html', (req, res) => {
   res.sendFile(__dirname + '/public/eye_model.html');
 });
 
