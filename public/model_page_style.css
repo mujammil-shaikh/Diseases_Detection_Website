@@ -224,6 +224,11 @@ a:hover {
     margin-top: 2%; /* Adjust font size for headings on small screens */
   }
 
+  #introduction{
+    margin-top: 10%;
+  }
+  
+
   .image-preview img {
   width: 50%;
   }
