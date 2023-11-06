@@ -107,6 +107,8 @@ img {
 }
 
 .h1 {
+  position: fixed;
+  width: 98%;
   text-align: center;
   color: white;
   padding: 1% 0;
