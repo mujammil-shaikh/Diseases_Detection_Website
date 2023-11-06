@@ -7,6 +7,7 @@
 
 /* Body styles */
 body {
+  margin
   font-family: 'Nunito Sans', sans-serif;
   color: #000;
   font-weight: 400;
@@ -44,6 +45,7 @@ body {
 
 #h1 {
   position: fixed;
+  width: 98%;
   text-align: center;
   transition: background-color 0.3s;
   margin: 1%;
@@ -52,11 +54,12 @@ body {
   padding: 1% 0;
   background-color: #e4312b;
   border-radius: 5px;
-  box-shadow: 0 0 10px #e4312bb6;
+  box-shadow: 0 0 10px #e4312bcc; 
 }
 
 #introduction{
   margin: 1%;
+  margin-top: 7%;
   padding: 1%;
   display: flex;
   flex-direction: column;
