@@ -41,13 +41,17 @@ body {
   background-color: #e4312b;
   border-radius: 50px;
 }
+
 #h1 {
-  color: black;
   text-align: center;
   transition: background-color 0.3s;
   margin: 1%;
-  font-size: medium;
-  box-shadow: 0 0 10px #1449542a;
+  text-align: center;
+  color: white;
+  padding: 1% 0;
+  background-color: #e4312b;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #e4312bb6;
 }
 
 #introduction{
