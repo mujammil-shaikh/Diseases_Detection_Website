@@ -59,7 +59,7 @@ body {
 
 #introduction{
   margin: 1%;
-  margin-top: 7%;
+  margin-top: 8%;
   padding: 1%;
   display: flex;
   flex-direction: column;
@@ -233,7 +233,7 @@ a:hover {
   }
 
   #introduction{
-    margin-top: 10%;
+    margin-top: 12%;
   }
   
   #fileButton, #predictButton{
